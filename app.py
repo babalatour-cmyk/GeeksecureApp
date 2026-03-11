@@ -2,10 +2,10 @@ import streamlit as st
 from PIL import Image
 import os
 
-# --- 1. CONFIGURATION ---
+
 st.set_page_config(page_title="GEEKSECURE21 | HUB", page_icon="🛡️", layout="wide")
 
-# --- 2. STYLE CSS PERSONNALISÉ (Le look "Tech Fun") ---
+
 st.markdown("""
     <style>
     /* Fond global sombre et police tech */
@@ -42,8 +42,7 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-# --- 3. AFFICHAGE DU LOGO (Correction) ---
-# On utilise des colonnes pour centrer le logo
+
 col_l1, col_l2, col_l3 = st.columns([1, 1, 1])
 with col_l2:
     if os.path.exists("logo.png"):
@@ -52,14 +51,14 @@ with col_l2:
     else:
         st.error("⚠️ Fichier 'logo.png' introuvable dans le dossier !")
 
-# --- 4. TITRE ET SOUS-TITRE ---
+
 st.markdown('<p class="neon-text">GEEKSECURE21</p>', unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: center; color: white;'>SYSTEM ACCESS : GRANTED ✅</h3>", unsafe_allow_html=True)
 st.write(f"<p style='text-align: center; color: #aaaaaa;'>By Babacar SARR - Cyber Engineer 🇸🇳</p>", unsafe_allow_html=True)
 
 st.divider()
 
-# --- 5. GRILLE DE CERTIFICATIONS ---
+
 st.markdown("### ⚡ SÉLECTIONNEZ VOTRE MODULE DE FORMATION")
 
 col1, col2, col3 = st.columns(3)
@@ -87,3 +86,4 @@ with col3:
 
 st.divider()
 st.caption("Terminal sécurisé Geeksecure21 | Guediawaye, Dakar Region")
+
